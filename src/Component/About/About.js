@@ -1,4 +1,4 @@
-import React from 'react';
+echo "# healthcare-related-website-rahathahmed" >> README.mdimport React from 'react';
 import img from "../img/bg.jpg";
 const About = () => {
     return (
