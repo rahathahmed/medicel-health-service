@@ -4,6 +4,12 @@ import useAuth from "../../Hook/UseAuth";
 import logo from "../img/logo.png";
 const Login = () => {
 
+  const form = {
+    padding: "20px",
+    background: "#fff",
+    border: "3px solid #bdc4bd"
+  };
+
     const [loginData,setLoginData] = useState([]);
 
     const { logInUser,googleSignIn } = useAuth();
@@ -20,15 +26,10 @@ const Login = () => {
         e.preventDefault()
     }
     return (
-      <div className="w-50 mx-auto">
+      <div className=" mx-auto" style={{ width: "400px" }}>
         <h2>Login</h2>
-        <img
-          className="card-img-top"
-          src={logo}
-          style={{ width: "50px", height: "50px" ,borderRadius:'50%'}}
-          alt=""
-        />
-        <form onSubmit={handleOnSubmit}>
+
+        <form onSubmit={handleOnSubmit} style={form}>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input
@@ -57,13 +58,15 @@ const Login = () => {
             Log in
           </button>
         </form>
-
-        <button onClick={googleSignIn} className="btn btn-primary my-3">
+        <p className="mt-3"> Sign In Another Account </p>
+        <button onClick={googleSignIn} className="btn btn-primary ">
           {" "}
-          Google Sign In
+         Google Sign In 
         </button>
 
-        <p>Are Your New User Please <Link to="/register">Register </Link></p>
+        <p>
+          Are Your New User Please <Link to="/register">Register </Link>
+        </p>
       </div>
     );
 };
