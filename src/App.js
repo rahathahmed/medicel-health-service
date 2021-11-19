@@ -57,9 +57,9 @@ function App() {
               <SingleService></SingleService>
             </PrivateRoute>
 
-            <Route path="/details/:id">
+            <PrivateRoute path="/details/:id">
               <Details></Details>
-            </Route>
+            </PrivateRoute>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>
