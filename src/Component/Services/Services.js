@@ -13,7 +13,7 @@ const Services = () => {
     return (
       <div className=" container p-4">
         <h2 className="text-center" style={{ fontFamily: "Yuji Boku" }}>
-          Service {services.length}
+          Our Service
         </h2>
         <div className="row g-2">
           {services.map((service) => (
